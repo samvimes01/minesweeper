@@ -1,2 +1,3 @@
-# minesweeper
-minesweeper for mate academy
+# MineSweeper
+
+MineSweeper v2 for mate academy
