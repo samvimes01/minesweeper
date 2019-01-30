@@ -1,0 +1,50 @@
+:root {
+  --rowNum: 5;
+  --colNum: 5;
+  --gridSize: 25px;
+  --cellColor: #b3d4fc;
+  --cellColorHover: #8abbf8;
+}
+
+#controls {
+  margin: 10px;
+}
+#solution {
+  display: grid;
+  grid-template-rows: fit-content(60%);
+  grid-template-columns: fit-content(60%);
+}
+
+.minesweeper__field {
+  display: grid;
+  grid-template-rows: repeat(var(--rowNum), var(--gridSize));
+  grid-template-columns: repeat(var(--colNum), var(--gridSize));
+  gap: 5px;
+  border: 1px solid steelblue;
+  padding: 2px;
+}
+
+.minesweeper__field-cell {
+  grid-column-start: auto;
+  grid-row-start: auto;
+  background: var(--cellColor);
+  color: var(--cellColor);
+  cursor: default;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 2px 7px;
+  user-select: none;
+}
+
+.minesweeper__field-cell:not(.opened):hover {
+  background: var(--cellColorHover);
+}
+
+.opened {
+  background: steelblue;
+}
+
+
+.hidden {
+   display: none;
+}
